@@ -3,6 +3,8 @@
     <uses-feature android:name="android.hardware.vulkan.version" android:version="1" android:required="true" />
     <application
         android:label="Kimaling"
+        android:allowBackup="true"
+        android:supportsRtl="true"
         android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
         <activity
             android:name="com.emu.mali.MainActivity"
