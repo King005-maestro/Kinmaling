@@ -23,7 +23,7 @@ jobs:
       run: |
         echo "sdk.dir=${ANDROID_HOME}" > local.properties
 
-    - name: Build APK with Gradle
+    - name: Build APK with Gradle 9
       run: |
         chmod +x gradlew || true
         ./gradlew assembleDebug
