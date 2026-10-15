@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://android.com">
-    <uses-feature android:name="android.hardware.vulkan.version" android:version="1" android:required="true" />
+    <uses-feature android:name="android.hardware.vulkan.version" android:required="true" />
     <application
         android:label="Kimaling"
-        android:allowBackup="true"
-        android:supportsRtl="true"
         android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
         <activity
-            android:name="com.emu.mali.MainActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
