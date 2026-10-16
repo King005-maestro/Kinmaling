@@ -27,14 +27,8 @@ bool FrameBridge::selectExtensions(VkPhysicalDevice pd, std::vector<const char*>
     out.push_back("VK_ANDROID_external_memory_android_hardware_buffer");
     out.push_back("VK_EXT_queue_family_foreign");
     if (has("VK_KHR_external_semaphore_fd")) {
-        VkPhysicalDeviceExternalSemaphoreInfo si{VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_INFO};
-        si.handleType = VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_SYNC_FD_BIT;
-        VkExternalSemaphoreProperties sp{VK_STRUCTURE_TYPE_EXTERNAL_SEMAPHORE_PROPERTIES};
-        vkGetPhysicalDeviceExternalSemaphoreProperties(pd, &si, &sp);
-        if (sp.externalSemaphoreFeatures & VK_EXTERNAL_SEMAPHORE_FEATURE_IMPORTABLE_BIT) {
-            out.push_back("VK_KHR_external_semaphore_fd");
-            syncFd = true;
-        }
+                out.push_back("VK_KHR_external_semaphore_fd");
+        syncFd = true;
     }
     return true;
 }
